@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 
 export interface Props {
-  content: string
+  spec: string
 }
 
 class Spec extends Component<Props> {
   render() {
-    return <div />
+    const { spec } = this.props
+    return <pre className="Spec">
+      <code>{spec}</code>
+    </pre>
   }
 }
 

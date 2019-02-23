@@ -1,3 +1,9 @@
+:root {
+  --spacing-unit: 24px;
+  --spacing-unit--small: 12px;
+  --spacing-unit--large: 48px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -11,4 +17,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.Spec {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--spacing-unit);
 }
