@@ -1,16 +1,22 @@
-import React, { Component } from 'react'
+import React, { Component } from "react"
+import { connect } from "react-redux"
 
-export interface Props {
+import { State } from "./types"
+
+interface SpecProps {
   spec: string
 }
 
-class Spec extends Component<Props> {
+const mapStateToProps = (state: State) => ({ spec: state.spec })
+
+class Spec extends Component<SpecProps> {
   render() {
-    const { spec } = this.props
-    return <pre className="Spec">
-      <code>{spec}</code>
-    </pre>
+    return (
+      <pre className="Spec">
+        <code>{this.props.spec}</code>
+      </pre>
+    )
   }
 }
 
-export default Spec
+export default connect(mapStateToProps)(Spec)
