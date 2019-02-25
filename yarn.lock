@@ -890,6 +890,11 @@
   dependencies:
     "@types/jest-diff" "*"
 
+"@types/lodash@^4.14.121":
+  version "4.14.121"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.121.tgz#9327e20d49b95fc2bf983fc2f045b2c6effc80b9"
+  integrity sha512-ORj7IBWj13iYufXt/VXrCNMbUuCTJfhzme5kx9U/UtcIPdJYuvPDUAlHlbNhz/8lKCLy9XGIZnGrqXOtQbPGoQ==
+
 "@types/node@*":
   version "10.12.24"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.24.tgz#b13564af612a22a20b5d95ca40f1bffb3af315cf"
@@ -932,6 +937,11 @@
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
+
+"@types/redux-actions@^2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@types/redux-actions/-/redux-actions-2.3.2.tgz#a141515f280d19fd53be7e8a9994985847423540"
+  integrity sha512-FjXZQQmHCq2mEvIyWdYAgcIYo4qEDLOMTjC2Zwp8s0MjR8jmJORr0Z6zmQLMhkOJh25cjPQ89V3tDgOE4wZx6g==
 
 "@types/tapable@1.0.2":
   version "1.0.2"

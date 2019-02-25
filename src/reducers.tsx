@@ -1,22 +1,12 @@
 import { Block, State } from "./types"
-
-export interface Message {
-  user: string
-  message: string
-  timestamp: number
-}
-
-export const SEND_MESSAGE = "SEND_MESSAGE"
-
-interface SomeAction {
-  type: typeof SEND_MESSAGE
-  payload: object
-}
+import { Action, handleActions } from "redux-actions"
+import { setSimValAction, AppActionTypes, SET_SIM_VAL } from "./actions"
+import _ from "lodash"
 
 const initialSpec = `
 rv sam:
   repeat 100:
-    data: red, green
+    data red, green
     choice
 `
 const initialBlocks: Block[] = [
@@ -44,11 +34,23 @@ const initialBlocks: Block[] = [
   },
 ]
 
-const appReducer = (
-  state = { blocks: initialBlocks, spec: initialSpec },
-  action: SomeAction,
-): State => {
-  return state
+const initialSim: any[] = []
+
+const initialState: State = {
+  blocks: initialBlocks,
+  spec: initialSpec,
+  sim: initialSim,
 }
 
-export default appReducer
+export default function(state = initialState, action: AppActionTypes): State {
+  switch (action.type) {
+    case SET_SIM_VAL:
+      const { path, val } = action.payload
+      return {
+        ...state,
+        sim: _.set(state.sim, path, val),
+      }
+    default:
+      return state
+  }
+}

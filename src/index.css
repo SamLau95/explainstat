@@ -31,6 +31,12 @@ code {
   padding: var(--spacing-unit);
 }
 
-.SimBlock__children {
-  padding: 0 var(--spacing-unit--small);
+.SimBlocks {
+  border: 2px solid darkslategray;
+  margin-top: var(--spacing-unit--small);
+  padding: 0 var(--spacing-unit--small) var(--spacing-unit--small);
+}
+
+.SimBlock {
+  margin-top: var(--spacing-unit--small);
 }

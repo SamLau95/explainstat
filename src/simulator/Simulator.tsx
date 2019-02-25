@@ -16,7 +16,7 @@ class Simulator extends Component<Props> {
   render() {
     return (
       <div className="Simulator">
-        <SimBlocks blocks={this.props.blocks} />
+        <SimBlocks blocks={this.props.blocks} path={[]} />
       </div>
     )
   }
